@@ -1,0 +1,25 @@
+{
+  "name": "design-patterns",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BahadirYildizOSF/design-patterns.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BahadirYildizOSF/design-patterns/issues"
+  },
+  "homepage": "https://github.com/BahadirYildizOSF/design-patterns#readme",
+  "dependencies": {
+    "eslint": "^5.16.0",
+    "yuml-diagram": "^1.0.9"
+  }
+}
