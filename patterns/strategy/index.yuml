@@ -1,0 +1,12 @@
+// {type:class}
+// {direction:topDown}
+// [note: You can stick notes on diagrams too!{bg:cornsilk}]
+
+[Position]
+[Position]^[BackEndDeveloper|work()]
+[Position]^[FrontEndDeveloper|work()]
+[Position]^[SalesforceDeveloper|work()]
+[Position]^[DefaultPosition|work()]
+[Position]-+[Developer]
+
+

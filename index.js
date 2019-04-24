@@ -10,7 +10,7 @@ function generateSVGfromUML(){
     files.forEach(function(file){
         console.log(`Generating UML diagram for ${file} pattern...`);
         var rootDir = path.resolve(__dirname, 'patterns', file);
-        fs.readFile(path.resolve(rootDir, 'index.yuml'),function(err, yumlText){
+        fs.readFile(path.resolve(rootDir, 'index.yuml'), 'utf8',function(err, yumlText){
             if(err){
                 console.log(err);
                 return;
