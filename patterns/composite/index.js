@@ -1,40 +1,39 @@
-class Node{
-    constructor(name, children = null, weight = null){
+class TreeNode{
+    constructor(name, value){
         this.name = name;
-        this.weight = weight || {
-            local: 0,
-            global: 0
-        };
-
-        if(this.constructor != 'Alternative') this.children = children;
+        this.value = value;
     }
 
-    addChildren(node){
-        this.children.push(node);
-    }
-
-}
-
-
-class DecisionMaker extends Node{
-    constructor(name, children = null, weight = null){
-        super(name, children, weight);
+    render(){
+        console.log(`${this.name} : ${this.value}`);
     }
 }
 
-class Criterion extends Node{
-    constructor(name, children = null, weight = null){
-        super(name, children, weight);
+class Tree extends TreeNode{
+    constructor(name, value, children){
+        super(name, value);
+        this.children = children;
+    }
+
+    renderChildren(){
+        this.children.forEach((child) => child.render());
+    }
+
+    render(){
+        console.log(`${this.name} : ${this.value}`);
+        this.renderChildren();
     }
 }
 
-class Alternative extends Node{
-    constructor(name, weight = null){
-        super(name,null, weight);
-    }
+var tree = new Tree('Militia', '60 Food', [
+    new Tree('Man-at-Arms', '80 Food, 20 gold', [ 
+        new TreeNode('Long Swordsman', '80 Food, 30 Gold'),
+        new TreeNode('Light Cavalry', '100 Food, 20 Gold')
+    ]),
+    new Tree('Crossbowman', '60 Food, 30 Wood', [
+        new TreeNode('Arbalest', '60 Food, 40 Gold'),
+        new TreeNode('Skirmisher', '50 Food, 40 Wood')
+    ])
+]);
 
-    addChildren(node){
-        console.log('Adding children to an Alternative is prohibited');
-        return;
-    }
-}
+tree.render();

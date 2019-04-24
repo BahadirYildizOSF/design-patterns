@@ -1,0 +1,7 @@
+// {type:class}
+// {direction:topDown}
+// [note: You can stick notes on diagrams too!{bg:cornsilk}]
+
+[BinaryTreeNode]^[BinaryTree]
+[BinaryTree]-+[BinaryTree]
+[ClientCode]+-[BinaryTree]
